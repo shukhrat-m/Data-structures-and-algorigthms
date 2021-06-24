@@ -25,20 +25,14 @@ namespace DSandAlgorithms
             #endregion
 
             #region LinkedList
-            ILinkedList<int> linkedList = new SinglyLinkedList<int>();
-            linkedList.AddLast(10);
-            linkedList.AddLast(20);
+            SinglyLinkedList<int> linkedList = new SinglyLinkedList<int>();
             linkedList.AddLast(30);
+            linkedList.AddLast(20);
+            linkedList.AddLast(10);
             linkedList.Print();
-            linkedList.AddFirst(5);
-            linkedList.Print();
-            Console.WriteLine(linkedList.Contains(5));
-            linkedList.DeleteLast();
-            linkedList.Print();
-            linkedList.DeleteFirst();
-            linkedList.Print();
-            Console.WriteLine(linkedList.IndexOf(10));
-            Console.WriteLine(linkedList.IndexOf(20));
+            
+            Node<int> node = linkedList.GetKthNode(4);
+            Console.WriteLine(node.Value);
             #endregion
 
             Console.ReadLine();
